@@ -117,13 +117,23 @@ namespace TimeIsXP
             });
 
             // Define request parameters.
+            //sample spreadsheet:
+            //String spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
+            //String range = "Class Data!A2:F";
+
+            // Joel Cloud_DB
             String spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
+            //Range contains TAB name & Cell Range
             String range = "Class Data!A2:F";
+
             SpreadsheetsResource.ValuesResource.GetRequest request =
                     service.Spreadsheets.Values.Get(spreadsheetId, range);
 
             // Prints the names and majors of students in a sample spreadsheet:
             // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+            // Joel Cloud_DB
+            // https://docs.google.com/spreadsheets/d/1Uc50L9drAXOPvFPM7LJ-bwUkVwJSe-Fhm-zsokCZp2Q/edit
+
             ValueRange response = request.Execute();
             IList<IList<Object>> values = response.Values;
             if (values != null && values.Count > 0)
