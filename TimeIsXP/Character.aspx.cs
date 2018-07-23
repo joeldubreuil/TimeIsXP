@@ -13,6 +13,7 @@ using Google.Apis.Util.Store;
 using System.IO;
 using System.Threading;
 using System.Data;
+using TimeIsXP.Classes;
 
 namespace TimeIsXP
 {
@@ -20,19 +21,33 @@ namespace TimeIsXP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GenerateTableASP();
+            //GenerateTableASP();
+            GenerateTableASP_V2();
         }
 
-        // If modifying these scopes, delete your previously saved credentials
-        // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
-        static string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
-        static string ApplicationName = "Google Sheets API .NET Quickstart";
+        public void GenerateTableASP_V2()
+        {
+
+            DataTable dt = GoogleExcel.LoadGoogleSheet("Class", "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", "Class Data!A:F");
+
+            GridView gv = new GridView();
+            gv.DataSource = dt;
+            gv.DataBind();
+
+            // Add the the Table in the Form
+            form1.Controls.Add(gv);
+        }
 
 
         public void GenerateTableASP()
         {
-            DataTable dt = LoadGoogleSheet();
+            DataSet ds = new DataSet();
+            DataTable dt = GoogleExcel.LoadGoogleSheet("Class", "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", "Class Data!A:F");
+            ds.Tables.Add(dt);
+
             Table table = new Table();
+
+
             TableRow row = null;
 
 
@@ -72,110 +87,6 @@ namespace TimeIsXP
 
         }
 
-        //static void Main(string[] args)
-        public DataTable LoadGoogleSheet()
-        {
-            DataTable dt = new DataTable("Character");
-
-            dt.Columns.Add(new DataColumn("Student Name", typeof(string)));
-            dt.Columns.Add(new DataColumn("Gender", typeof(string)));
-            dt.Columns.Add(new DataColumn("Class Level", typeof(string)));
-            dt.Columns.Add(new DataColumn("Home State", typeof(string)));
-            dt.Columns.Add(new DataColumn("Major", typeof(string)));
-            dt.Columns.Add(new DataColumn("Extracurricular Activity", typeof(string)));
-
-
-
-
-
-            UserCredential credential;
-
-            string sPathCredential = HttpRuntime.BinDirectory + "client_secret.json";
-
-
-            using (var stream =
-                new FileStream(sPathCredential, FileMode.Open, FileAccess.Read))
-            {
-                //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                string credPath = HttpRuntime.BinDirectory;
-                credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
-
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
-                Console.WriteLine("Credential file saved to: " + credPath);
-            }
-
-            // Create Google Sheets API service.
-            var service = new SheetsService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
-            });
-
-            // Define request parameters.
-            //sample spreadsheet:
-            //String spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
-            //String range = "Class Data!A2:F";
-
-            // Joel Cloud_DB
-            String spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
-            //Range contains TAB name & Cell Range
-            String range = "Class Data!A2:F";
-
-            SpreadsheetsResource.ValuesResource.GetRequest request =
-                    service.Spreadsheets.Values.Get(spreadsheetId, range);
-
-            // Prints the names and majors of students in a sample spreadsheet:
-            // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
-            // Joel Cloud_DB
-            // https://docs.google.com/spreadsheets/d/1Uc50L9drAXOPvFPM7LJ-bwUkVwJSe-Fhm-zsokCZp2Q/edit
-
-            ValueRange response = request.Execute();
-            IList<IList<Object>> values = response.Values;
-            if (values != null && values.Count > 0)
-            {
-                ////Console.WriteLine("Name, Major");
-                //string sData = "Name, Major" + Environment.NewLine;
-                //foreach (var row in values)
-                //{
-                //    // Print columns A and E, which correspond to indices 0 and 4.
-                //    //Console.WriteLine("{0}, {1}", row[0], row[4]);
-
-                //    sData += row[0] + ", " + row[4] + Environment.NewLine; ;
-                //}
-
-                foreach (var row in values)
-                {
-                    if (row != null)
-                    {
-
-                        DataRow dr = dt.NewRow();
-
-                        dr["Student Name"] = (string)row[0];
-                        dr["Gender"] = (string)row[1];
-                        dr["Class Level"] = (string)row[2];
-                        dr["Home State"] = (string)row[3];
-                        dr["Major"] = (string)row[4];
-                        dr["Extracurricular Activity"] = (string)row[5];
-
-                        dt.Rows.Add(dr);
-                    }
-
-                }
-
-            }
-            else
-            {
-                Console.WriteLine("No data found.");
-            }
-            //Console.Read();
-
-            return dt;
-        }
     }
 
 }

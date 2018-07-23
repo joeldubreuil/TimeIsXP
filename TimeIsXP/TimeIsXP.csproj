@@ -185,6 +185,8 @@
     <Compile Include="Character.aspx.designer.cs">
       <DependentUpon>Character.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ASP_Table.cs" />
+    <Compile Include="Classes\GoogleExcel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
