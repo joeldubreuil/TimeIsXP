@@ -11,10 +11,28 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
             <asp:Label ID="Label1" runat="server" Text="Character Sheet"></asp:Label>
             <br />
-            <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-            <telerik:RadSlider ID="RadSlider1" runat="server"></telerik:RadSlider>
+            <asp:Label ID="Label_Time" runat="server" Text="Time"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_Time" runat="server"></telerik:RadSlider>
+            <br />
+            <asp:Label ID="Label_Upkeep" runat="server" Text="Upkeep"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_Upkeep" runat="server"></telerik:RadSlider>
+            <br />
+            <asp:Label ID="Label_InvestedTime" runat="server" Text="InvestedTime"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_InvestedTime" runat="server"></telerik:RadSlider>
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label_Detail_Upkeep" runat="server" Text="Detail_Upkeep"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_Detail_Upkeep" runat="server"></telerik:RadSlider>
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label_Detail_InvestedTime" runat="server" Text="Detail_InvestedTime"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_Detail_InvestedTime" runat="server"></telerik:RadSlider>
+
         </div>
     </form>
 </body>

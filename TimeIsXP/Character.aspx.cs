@@ -24,8 +24,18 @@ namespace TimeIsXP
             //GenerateTableASP();
             //GenerateTableASP_V2();
 
-            Init_RadSlider();
+            //Idea: give people 3-4 events free to start their character, so they can familiarize with the XP system.
+            //instead of free 200xp that will require another UI mechanic to startup.
 
+            int iTimeTotal = 390;
+            int iVisualUpkeepPourcent = 10;
+            int iTimeGained = 90;
+
+            Init_RadSlider_Time();
+            Init_RadSlider_Upkeep(iVisualUpkeepPourcent);
+            Init_RadSlider_InvestedTime(iVisualUpkeepPourcent);
+            Init_RadSlider_Detail_Upkeep(iTimeTotal);
+            Init_RadSlider_Detail_InvestedTime();
         }
 
         public void GenerateTableASP_V2()
@@ -41,19 +51,75 @@ namespace TimeIsXP
             form1.Controls.Add(gv);
         }
 
-        public void Init_RadSlider()
+        public void Init_RadSlider_Time()
         {
-            RadSlider1.MinimumValue = 0;
-            RadSlider1.MaximumValue = 100;
             //RadSlider1.Value = 50;
-            RadSlider1.LargeChange = 10;
             //RadSlider1.SelectedRegionStartValue = 0;
-
-            RadSlider1.IsSelectionRangeEnabled = true;
-            RadSlider1.SelectionStart = 10;
-            RadSlider1.SelectionEnd = 90;
+            RadSlider_Time.MinimumValue = 0;
+            RadSlider_Time.MaximumValue = 100;
+            RadSlider_Time.LargeChange = 10;
+            
+            RadSlider_Time.IsSelectionRangeEnabled = true;
+            RadSlider_Time.SelectionStart = 0;
+            RadSlider_Time.SelectionEnd = 100;
         }
 
+        public void Init_RadSlider_Upkeep(int iVisualUpkeepPourcent)
+        {
+            RadSlider_Upkeep.MinimumValue = 0;
+            RadSlider_Upkeep.MaximumValue = 100;
+            RadSlider_Upkeep.LargeChange = 10;
+
+            RadSlider_Upkeep.IsSelectionRangeEnabled = true;
+            RadSlider_Upkeep.SelectionStart = 0;
+            RadSlider_Upkeep.SelectionEnd = iVisualUpkeepPourcent;
+        }
+
+        public void Init_RadSlider_InvestedTime(int iVisualUpkeepPourcent)
+        {
+            RadSlider_InvestedTime.MinimumValue = 0;
+            RadSlider_InvestedTime.MaximumValue = 100;
+            //RadSlider_InvestedTime.Value = 50;
+            RadSlider_InvestedTime.LargeChange = 10;
+            //RadSlider_InvestedTime.SelectedRegionStartValue = 0;
+
+            RadSlider_InvestedTime.IsSelectionRangeEnabled = true;
+            RadSlider_InvestedTime.SelectionStart = iVisualUpkeepPourcent;
+            RadSlider_InvestedTime.SelectionEnd = 100;
+        }
+
+        public void Init_RadSlider_Detail_Upkeep(int iTimeTotal)
+        {
+            //For each Skill with at least 1 xp, split in % from iTimeUpkeep
+            //ex.
+            //Skill 1 : 57xp / iTimeTotal
+            //Skill 2 : 38xp / iTimeTotal
+            //Skill 3 : 21xp / iTimeTotal
+
+
+            RadSlider_Detail_Upkeep.MinimumValue = 0;
+            RadSlider_Detail_Upkeep.MaximumValue = 100;
+            //RadSlider_Detail_Upkeep.Value = 50;
+            RadSlider_Detail_Upkeep.LargeChange = 10;
+            //RadSlider_Detail_Upkeep.SelectedRegionStartValue = 0;
+
+            RadSlider_Detail_Upkeep.IsSelectionRangeEnabled = true;
+            RadSlider_Detail_Upkeep.SelectionStart = 10;
+            RadSlider_Detail_Upkeep.SelectionEnd = 90;
+        }
+
+        public void Init_RadSlider_Detail_InvestedTime()
+        {
+            RadSlider_Detail_InvestedTime.MinimumValue = 0;
+            RadSlider_Detail_InvestedTime.MaximumValue = 100;
+            //RadSlider_Detail_InvestedTime.Value = 50;
+            RadSlider_Detail_InvestedTime.LargeChange = 10;
+            //RadSlider_Detail_InvestedTime.SelectedRegionStartValue = 0;
+
+            RadSlider_Detail_InvestedTime.IsSelectionRangeEnabled = true;
+            RadSlider_Detail_InvestedTime.SelectionStart = 10;
+            RadSlider_Detail_InvestedTime.SelectionEnd = 90;
+        }
 
         public void GenerateTableASP()
         {
