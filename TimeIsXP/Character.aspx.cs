@@ -22,7 +22,10 @@ namespace TimeIsXP
         protected void Page_Load(object sender, EventArgs e)
         {
             //GenerateTableASP();
-            GenerateTableASP_V2();
+            //GenerateTableASP_V2();
+
+            Init_RadSlider();
+
         }
 
         public void GenerateTableASP_V2()
@@ -36,6 +39,19 @@ namespace TimeIsXP
 
             // Add the the Table in the Form
             form1.Controls.Add(gv);
+        }
+
+        public void Init_RadSlider()
+        {
+            RadSlider1.MinimumValue = 0;
+            RadSlider1.MaximumValue = 100;
+            //RadSlider1.Value = 50;
+            RadSlider1.LargeChange = 10;
+            //RadSlider1.SelectedRegionStartValue = 0;
+
+            RadSlider1.IsSelectionRangeEnabled = true;
+            RadSlider1.SelectionStart = 10;
+            RadSlider1.SelectionEnd = 90;
         }
 
 
