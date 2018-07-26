@@ -34,8 +34,12 @@ namespace TimeIsXP
             Init_RadSlider_Time();
             Init_RadSlider_Upkeep(iVisualUpkeepPourcent);
             Init_RadSlider_InvestedTime(iVisualUpkeepPourcent);
-            Init_RadSlider_Detail_Upkeep(iTimeTotal);
-            Init_RadSlider_Detail_InvestedTime();
+
+            Init_RadSlider_Upkeep_100();
+            Init_RadSlider_Upkeep_Detail(iTimeTotal);
+
+            Init_RadSlider_InvestedTime_Detail_100();
+            Init_RadSlider_InvestedTime_Detail();
         }
 
         public void GenerateTableASP_V2()
@@ -88,37 +92,93 @@ namespace TimeIsXP
             RadSlider_InvestedTime.SelectionEnd = 100;
         }
 
-        public void Init_RadSlider_Detail_Upkeep(int iTimeTotal)
+        public void Init_RadSlider_Upkeep_100()
         {
+            RadSlider_Upkeep_Detail_100.MinimumValue = 0;
+            RadSlider_Upkeep_Detail_100.MaximumValue = 100;
+            RadSlider_Upkeep_Detail_100.LargeChange = 10;
+
+            RadSlider_Upkeep_Detail_100.IsSelectionRangeEnabled = true;
+            RadSlider_Upkeep_Detail_100.SelectionStart = 0;
+            RadSlider_Upkeep_Detail_100.SelectionEnd = 100;
+        }
+
+        public void Init_RadSlider_Upkeep_Detail(int iTimeTotal)
+        {
+
             //For each Skill with at least 1 xp, split in % from iTimeUpkeep
             //ex.
             //Skill 1 : 57xp / iTimeTotal
             //Skill 2 : 38xp / iTimeTotal
             //Skill 3 : 21xp / iTimeTotal
 
+            //RadSlider_Upkeep_Detail_Skill_1
+            RadSlider_Upkeep_Detail_Skill_1.MinimumValue = 0;
+            RadSlider_Upkeep_Detail_Skill_1.MaximumValue = 100;
+            RadSlider_Upkeep_Detail_Skill_1.LargeChange = 10;
 
-            RadSlider_Detail_Upkeep.MinimumValue = 0;
-            RadSlider_Detail_Upkeep.MaximumValue = 100;
-            //RadSlider_Detail_Upkeep.Value = 50;
-            RadSlider_Detail_Upkeep.LargeChange = 10;
-            //RadSlider_Detail_Upkeep.SelectedRegionStartValue = 0;
+            RadSlider_Upkeep_Detail_Skill_1.IsSelectionRangeEnabled = true;
+            RadSlider_Upkeep_Detail_Skill_1.SelectionStart = 0;
+            RadSlider_Upkeep_Detail_Skill_1.SelectionEnd = 33;
 
-            RadSlider_Detail_Upkeep.IsSelectionRangeEnabled = true;
-            RadSlider_Detail_Upkeep.SelectionStart = 10;
-            RadSlider_Detail_Upkeep.SelectionEnd = 90;
+            //RadSlider_Upkeep_Detail_Skill_2
+            RadSlider_Upkeep_Detail_Skill_2.MinimumValue = 0;
+            RadSlider_Upkeep_Detail_Skill_2.MaximumValue = 100;
+            RadSlider_Upkeep_Detail_Skill_2.LargeChange = 10;
+
+            RadSlider_Upkeep_Detail_Skill_2.IsSelectionRangeEnabled = true;
+            RadSlider_Upkeep_Detail_Skill_2.SelectionStart = 33;
+            RadSlider_Upkeep_Detail_Skill_2.SelectionEnd = 66;
+
+            //RadSlider_Upkeep_Detail_Skill_3
+            RadSlider_Upkeep_Detail_Skill_3.MinimumValue = 0;
+            RadSlider_Upkeep_Detail_Skill_3.MaximumValue = 100;
+            RadSlider_Upkeep_Detail_Skill_3.LargeChange = 10;
+
+            RadSlider_Upkeep_Detail_Skill_3.IsSelectionRangeEnabled = true;
+            RadSlider_Upkeep_Detail_Skill_3.SelectionStart = 66;
+            RadSlider_Upkeep_Detail_Skill_3.SelectionEnd = 100;
         }
 
-        public void Init_RadSlider_Detail_InvestedTime()
+        public void Init_RadSlider_InvestedTime_Detail_100()
         {
-            RadSlider_Detail_InvestedTime.MinimumValue = 0;
-            RadSlider_Detail_InvestedTime.MaximumValue = 100;
-            //RadSlider_Detail_InvestedTime.Value = 50;
-            RadSlider_Detail_InvestedTime.LargeChange = 10;
-            //RadSlider_Detail_InvestedTime.SelectedRegionStartValue = 0;
+            RadSlider_InvestedTime_Detail_100.MinimumValue = 0;
+            RadSlider_InvestedTime_Detail_100.MaximumValue = 100;
+            RadSlider_InvestedTime_Detail_100.LargeChange = 10;
 
-            RadSlider_Detail_InvestedTime.IsSelectionRangeEnabled = true;
-            RadSlider_Detail_InvestedTime.SelectionStart = 10;
-            RadSlider_Detail_InvestedTime.SelectionEnd = 90;
+            RadSlider_InvestedTime_Detail_100.IsSelectionRangeEnabled = true;
+            RadSlider_InvestedTime_Detail_100.SelectionStart = 0;
+            RadSlider_InvestedTime_Detail_100.SelectionEnd = 100;
+        }
+
+        public void Init_RadSlider_InvestedTime_Detail()
+        {
+            //RadSlider_Upkeep_Detail_Skill_1
+            RadSlider_InvestedTime_Detail_Skill_1.MinimumValue = 0;
+            RadSlider_InvestedTime_Detail_Skill_1.MaximumValue = 100;
+            RadSlider_InvestedTime_Detail_Skill_1.LargeChange = 10;
+
+            RadSlider_InvestedTime_Detail_Skill_1.IsSelectionRangeEnabled = true;
+            RadSlider_InvestedTime_Detail_Skill_1.SelectionStart = 0;
+            RadSlider_InvestedTime_Detail_Skill_1.SelectionEnd = 33;
+
+            //RadSlider_Upkeep_Detail_Skill_2
+            RadSlider_InvestedTime_Detail_Skill_2.MinimumValue = 0;
+            RadSlider_InvestedTime_Detail_Skill_2.MaximumValue = 100;
+            RadSlider_InvestedTime_Detail_Skill_2.LargeChange = 10;
+
+            RadSlider_InvestedTime_Detail_Skill_2.IsSelectionRangeEnabled = true;
+            RadSlider_InvestedTime_Detail_Skill_2.SelectionStart = 33;
+            RadSlider_InvestedTime_Detail_Skill_2.SelectionEnd = 66;
+
+            //RadSlider_Upkeep_Detail_Skill_3
+            RadSlider_InvestedTime_Detail_Skill_3.MinimumValue = 0;
+            RadSlider_InvestedTime_Detail_Skill_3.MaximumValue = 100;
+            RadSlider_InvestedTime_Detail_Skill_3.LargeChange = 10;
+
+            RadSlider_InvestedTime_Detail_Skill_3.IsSelectionRangeEnabled = true;
+            RadSlider_InvestedTime_Detail_Skill_3.SelectionStart = 66;
+            RadSlider_InvestedTime_Detail_Skill_3.SelectionEnd = 100;
         }
 
         public void GenerateTableASP()

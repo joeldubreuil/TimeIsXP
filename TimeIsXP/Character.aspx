@@ -25,13 +25,31 @@
             <br />
             <br />
             <br />
-            <asp:Label ID="Label_Detail_Upkeep" runat="server" Text="Detail_Upkeep"></asp:Label>
-            <telerik:RadSlider ID="RadSlider_Detail_Upkeep" runat="server"></telerik:RadSlider>
+            <asp:Label ID="Label_Upkeep_Detail_100" runat="server" Text="Upkeep_Detail"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_Upkeep_Detail_100" runat="server"></telerik:RadSlider>
+            <br />
+            <div class="Sliders_Upkeep_Detail">
+                <asp:Label ID="Label_Upkeep_Detail_Skill_1" runat="server" Text="Upkeep_Detail_Skill_1"></asp:Label>
+                <telerik:RadSlider ID="RadSlider_Upkeep_Detail_Skill_1" runat="server"></telerik:RadSlider>
+                <asp:Label ID="Label_Upkeep_Detail_Skill_2" runat="server" Text="Upkeep_Detail_Skill_2"></asp:Label>
+                <telerik:RadSlider ID="RadSlider_Upkeep_Detail_Skill_2" runat="server"></telerik:RadSlider>
+                <asp:Label ID="Label_Upkeep_Detail_Skill_3" runat="server" Text="Upkeep_Detail_Skill_3"></asp:Label>
+                <telerik:RadSlider ID="RadSlider_Upkeep_Detail_Skill_3" runat="server"></telerik:RadSlider>
+            </div>
             <br />
             <br />
             <br />
-            <asp:Label ID="Label_Detail_InvestedTime" runat="server" Text="Detail_InvestedTime"></asp:Label>
-            <telerik:RadSlider ID="RadSlider_Detail_InvestedTime" runat="server"></telerik:RadSlider>
+            <asp:Label ID="Label_InvestedTime_Detail_100" runat="server" Text="InvestedTime_Detail"></asp:Label>
+            <telerik:RadSlider ID="RadSlider_InvestedTime_Detail_100" runat="server"></telerik:RadSlider>
+            <br />
+            <div class="Sliders_InvestedTime_Detail">
+                <asp:Label ID="Label_InvestedTime_Detail_Skill_1" runat="server" Text="InvestedTime_Detail_Skill_1"></asp:Label>
+                <telerik:RadSlider ID="RadSlider_InvestedTime_Detail_Skill_1" runat="server"></telerik:RadSlider>
+                <asp:Label ID="Label_InvestedTime_Detail_Skill_2" runat="server" Text="InvestedTime_Detail_Skill_2"></asp:Label>
+                <telerik:RadSlider ID="RadSlider_InvestedTime_Detail_Skill_2" runat="server"></telerik:RadSlider>
+                <asp:Label ID="Label_InvestedTime_Detail_Skill_3" runat="server" Text="InvestedTime_Detail_Skill_3"></asp:Label>
+                <telerik:RadSlider ID="RadSlider_InvestedTime_Detail_Skill_3" runat="server"></telerik:RadSlider>
+            </div>
 
         </div>
     </form>

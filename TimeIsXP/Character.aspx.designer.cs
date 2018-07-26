@@ -94,39 +94,147 @@ namespace TimeIsXP {
         protected global::Telerik.Web.UI.RadSlider RadSlider_InvestedTime;
         
         /// <summary>
-        /// Label_Detail_Upkeep control.
+        /// Label_Upkeep_Detail_100 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_Detail_Upkeep;
+        protected global::System.Web.UI.WebControls.Label Label_Upkeep_Detail_100;
         
         /// <summary>
-        /// RadSlider_Detail_Upkeep control.
+        /// RadSlider_Upkeep_Detail_100 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadSlider RadSlider_Detail_Upkeep;
+        protected global::Telerik.Web.UI.RadSlider RadSlider_Upkeep_Detail_100;
         
         /// <summary>
-        /// Label_Detail_InvestedTime control.
+        /// Label_Upkeep_Detail_Skill_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_Detail_InvestedTime;
+        protected global::System.Web.UI.WebControls.Label Label_Upkeep_Detail_Skill_1;
         
         /// <summary>
-        /// RadSlider_Detail_InvestedTime control.
+        /// RadSlider_Upkeep_Detail_Skill_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadSlider RadSlider_Detail_InvestedTime;
+        protected global::Telerik.Web.UI.RadSlider RadSlider_Upkeep_Detail_Skill_1;
+        
+        /// <summary>
+        /// Label_Upkeep_Detail_Skill_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Upkeep_Detail_Skill_2;
+        
+        /// <summary>
+        /// RadSlider_Upkeep_Detail_Skill_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSlider RadSlider_Upkeep_Detail_Skill_2;
+        
+        /// <summary>
+        /// Label_Upkeep_Detail_Skill_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Upkeep_Detail_Skill_3;
+        
+        /// <summary>
+        /// RadSlider_Upkeep_Detail_Skill_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSlider RadSlider_Upkeep_Detail_Skill_3;
+        
+        /// <summary>
+        /// Label_InvestedTime_Detail_100 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_InvestedTime_Detail_100;
+        
+        /// <summary>
+        /// RadSlider_InvestedTime_Detail_100 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSlider RadSlider_InvestedTime_Detail_100;
+        
+        /// <summary>
+        /// Label_InvestedTime_Detail_Skill_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_InvestedTime_Detail_Skill_1;
+        
+        /// <summary>
+        /// RadSlider_InvestedTime_Detail_Skill_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSlider RadSlider_InvestedTime_Detail_Skill_1;
+        
+        /// <summary>
+        /// Label_InvestedTime_Detail_Skill_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_InvestedTime_Detail_Skill_2;
+        
+        /// <summary>
+        /// RadSlider_InvestedTime_Detail_Skill_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSlider RadSlider_InvestedTime_Detail_Skill_2;
+        
+        /// <summary>
+        /// Label_InvestedTime_Detail_Skill_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_InvestedTime_Detail_Skill_3;
+        
+        /// <summary>
+        /// RadSlider_InvestedTime_Detail_Skill_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadSlider RadSlider_InvestedTime_Detail_Skill_3;
     }
 }
